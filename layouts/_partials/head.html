@@ -8,4 +8,7 @@
   {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
   <title>{{ .Title }}</title>
   {{ partial "style.html" . }}
+  {{ if .Param "math" }}
+    {{ partialCached "math.html" . }}
+  {{ end }}
 </head>

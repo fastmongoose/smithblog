@@ -23,6 +23,7 @@ title = "Smith's Blog"
     weight = 3
 
 [params]
+    math = true
     dateFormat = "Jan 2, 2006"
     homeText = "Welcome to my website. Here you will find some poems that I really like."
 
@@ -32,3 +33,12 @@ title = "Smith's Blog"
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
