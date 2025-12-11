@@ -35,3 +35,7 @@ KL(\hat{y} || y) &= \sum_{c=1}^{M}\hat{y}_c \log{\frac{\hat{y}_c}{y_c}} \\
 JS(\hat{y} || y) &= \frac{1}{2}(KL(y||\frac{y+\hat{y}}{2}) + KL(\hat{y}||\frac{y+\hat{y}}{2}))
 \end{aligned}
 \]
+
+\[
+\Delta \sigma_z = \frac{3P}{2\pi z^2} \left[ \frac{1}{1 + \left(\frac{r}{z}\right)^2} \right]^{5/2}
+\]
