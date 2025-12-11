@@ -28,3 +28,7 @@ title = "Smith's Blog"
 
 [taxonomies]
   tag = "tags"
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'

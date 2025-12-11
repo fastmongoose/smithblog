@@ -5,4 +5,21 @@
   <p class="font-125">{{ .Site.Params.homeText | markdownify }}</p>
 </div>
 
+<h2>Latest Writings</h2>
+<ul>
+  {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+    </li>
+  {{ end }}
+</ul>
+
+<div class="tags-cloud">
+  {{ range first 5 .Site.Taxonomies.tags.ByCount }}
+    <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }} ({{ .Count }})</a>
+  {{ end }}
+</div>
+
 {{ end }}
+
